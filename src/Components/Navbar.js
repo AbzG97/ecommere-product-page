@@ -7,7 +7,7 @@ function Navbar() {
         <StyledNavbar>
             <nav>
                 <ul>
-                    <li>SNEAKERS</li>
+                    <li id="Logo">SNEAKERS</li>
                     <li>Collections</li>
                     <li>Men</li>
                     <li>Women</li>
@@ -24,24 +24,35 @@ function Navbar() {
 }
 
 const StyledNavbar = styled.div`
-    width: 100%;
-    nav{  
-        /* background-color: aqua; */
+    /* width: 100%; */
+    /* background-color: aqua; */
+    nav{
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        background-color: aqua;
         position: fixed;
-        height: 10vh;
+        /* height: 20vh; */
         width: 100%;
+        
     }
     
     nav > ul {
-        height: 100%;
+        /* height: 100%; */
         width: 100%;
-        /* background-color: red; */
+        background-color: red;
         /* padding: 2rem; */
         display: flex;
         list-style-type: none;
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid black;
+        #Logo {
+            font-weight: bold;
+            font-size: 2rem;
+            letter-spacing: 5px;
+        }
         li {
             cursor: pointer;
             margin: .25rem;
@@ -50,24 +61,10 @@ const StyledNavbar = styled.div`
             transition:all .5s ease-in-out;
             :hover {
                 border-bottom:5px solid #002f5b;
+            }
 
-            }
-            :after {
-                content: '';
-                position: absolute;
-                width: 0px;
-                height: 5px;
-                left: 50%;
-                bottom:0;
-                background-color: white;
-                transition: all ease-in-out .2s;
-            }
-            :hover::after{
-                width: 100%;
-                left: 0;
-            }
             :nth-child(6) {
-                margin-right: 47rem;
+                margin-right: 20rem;
                 /* background-color: blue; */
             }
             img {
