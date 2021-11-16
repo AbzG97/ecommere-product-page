@@ -31,7 +31,7 @@ const StyledNavbar = styled.div`
         /* align-items: center; */
         /* justify-content: center; */
         background-color: aqua;
-        position: fixed;
+        /* position: fixed; */
         /* height: 20vh; */
         width: 100%;
         

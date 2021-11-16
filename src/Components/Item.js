@@ -18,8 +18,10 @@ const ItemSectionStyle = styled.div `
     background-color: lightcyan;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    /* justify-content: center; */
+    /* align-items: center; */
     
 `
 
