@@ -11,7 +11,9 @@ function CurrentPicture({currentPicture}) {
 
 const StyledCurrentPicture = styled.div`
     img {
-        margin: 1rem;
+        
+        margin-bottom: 3rem;
+        /* padding-bottom: 3rem; */
         width: 47%;
         border-radius: 15px;
     }

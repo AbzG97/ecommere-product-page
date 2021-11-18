@@ -9,19 +9,19 @@ function Item() {
             <ItemPictures/>
             <ItemDescription/>
         </ItemSectionStyle>
-            
-        
     )
 }
 
 const ItemSectionStyle = styled.div `
-    background-color: lightcyan;
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 1.5rem;
-    /* justify-content: center; */
-    /* align-items: center; */
+    /* padding: 1.5rem; */
+    margin-top: 2rem;
+    padding-top: 1rem;
+    /* margin: 1rem; */
+    justify-content: space-evenly;
+    align-items: center;
     
 `
 

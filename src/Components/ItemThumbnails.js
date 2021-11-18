@@ -14,9 +14,12 @@ function ItemThumbnails({pictures, setCurrentPicture}) {
 const StyledItemThumbnails = styled.div `
     display: flex;
     flex-direction: row;
-    background-color: red;
-    /* align-items: center; */
-    /* justify-content: center; */
+    /* background-color: red; */
+    align-items: center;
+    height: 15vh;
+    /* margin: 1rem; */
+    /* padding: 1.5rem; */
+    justify-content: space-evenly;
     /* padding-right: 12rem; */
     /* padding-left: 12rem; */
 `

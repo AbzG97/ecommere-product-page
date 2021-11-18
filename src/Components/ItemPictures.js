@@ -31,10 +31,11 @@ function ItemPictures() {
 }
 
 const ItemPicturesSectionStyle = styled.div `
-    background-color: blue;
+    /* height: 70vh; */
+    /* background-color: blue; */
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
     /* height: 100%; */
     
 `

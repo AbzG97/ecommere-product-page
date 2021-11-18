@@ -15,14 +15,17 @@ function Picture({pic, setCurrentPicture}) {
 const StyledPicture = styled.div`
     img {
         /* background-color: black; */
-        margin: 1rem;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
+        /* margin-top: 3rem; */
+        /* margin: 2rem; */
+        /* margin-left: 1rem; */
+        /* margin-right: 1rem; */
+        /* padding: 2rem; */
         width: 40%;
         border-radius: 15px;
+        transition:all .2s ease-in-out;
         :hover {
             cursor: pointer;
+            border: 7px solid orange;
         }
     }
 `;
