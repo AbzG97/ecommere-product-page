@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import ItemDescription from './ItemDescription';
 import ItemPictures from './ItemPictures';
 
-function Item() {
+function Item({item_in_cart, setItem_in_cart}) {
     return (
         <ItemSectionStyle>
             <ItemPictures/>
-            <ItemDescription/>
+            <ItemDescription item_in_cart={item_in_cart} setItem_in_cart={setItem_in_cart}/>
         </ItemSectionStyle>
     )
 }

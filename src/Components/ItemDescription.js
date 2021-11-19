@@ -3,11 +3,22 @@ import styled from 'styled-components';
 import minus_icon from '../images/icon-minus.svg'
 import plus_icon from '../images/icon-plus.svg'
 import cart_icon from '../images/icon-cart.svg'
+import { v4 as uuid } from 'uuid';
 
 
 
-function ItemDescription() {
-    const [quantity, setQuantity] = React.useState(0);
+function ItemDescription({item_in_cart, setItem_in_cart}) {
+    const [quantity, setQuantity] = React.useState(1);
+
+    const AddItemToCart = () => {
+        setItem_in_cart([...item_in_cart,{
+            "id": uuid(),
+            "product_title": "Fall Limited Edition Sneakers",
+            "product_price_after_sale": 125.00,
+            "quantity": quantity,
+            "final_price": quantity * 125.00,
+         }]);
+    }
 
     const increment_quantity = () => {
         setQuantity(quantity + 1);
@@ -32,7 +43,7 @@ function ItemDescription() {
                 <img className="quantity_icons" src={minus_icon} alt="minus_icon" onClick={decrement_quantity}/>
                 <p className="quantity_to_be_added">{quantity}</p>
                 <img className="quantity_icons" src={plus_icon} alt="plus_icon" onClick={increment_quantity}/>
-                <button className="add_to_cart_button" ><img className="cart_icon" src={cart_icon} alt="cart_icon"/><span>Add To Cart</span></button>
+                <button className="add_to_cart_button" onClick={AddItemToCart}><img className="cart_icon" src={cart_icon} alt="cart_icon"/><span>Add To Cart</span></button>
             </div>
         </ItemDescriptionSectionStyle>
             
