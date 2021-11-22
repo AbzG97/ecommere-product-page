@@ -1,21 +1,11 @@
 import styled from "styled-components";
 import profile_pic from "../images/image-avatar.png";
-import delete_item_icon from "../images/icon-delete.svg";
 import React from "react";
 import CartDisplay from "./CartDisplay";
 
 function Navbar({ item_in_cart, setItem_in_cart }) {
     const [displayCart, setDisplayCart] = React.useState(false);
-    const RemoveItemFromCart = (id) => {
-        console.log("clicked");
-        // const filtered = item_in_cart.filter(state => state !== id );
-        // if(filtered){
-        //     console.log(filtered)
-        // } else {
-        //     console.log("not found");
-        // }
-        // // setItem_in_cart(filtered);
-    }
+   
   return (
     <StyledNavbar>
       <p className="nav_item" id="Logo">
@@ -34,32 +24,8 @@ function Navbar({ item_in_cart, setItem_in_cart }) {
             fill-rule="nonzero"
           />
         </svg>
-        { displayCart && <CartDisplay/> }
+        { displayCart && <CartDisplay item_in_cart={item_in_cart} setItem_in_cart={setItem_in_cart}/> }
 
-          {/* {item_in_cart && displayCart &&
-            item_in_cart.map((item, index) => (
-              <div className="item_in_cart" key={index}>
-                <p className="item_in_cart_title">{item["product_title"]}</p>
-                <div className="item_in_cart_prices">
-                  <p className="item_in_cart_price">
-                    ${item["product_price_after_sale"]}
-                  </p>
-                  <p>x</p>
-                  <p className="item_in_cart_quantity">{item["quantity"]}</p>
-                  <p className="item_in_cart_final_price">
-                    ${item["final_price"]}
-                  </p>
-                  <img
-                   
-                    className="delete_item_icon"
-                    onClick={RemoveItemFromCart(index)}
-                    src={delete_item_icon}
-                    alt="delete_icon"
-                  />
-                </div>
-              </div>
-            ))} */}
-         
       </div>
 
       <img className="nav_item" src={profile_pic} alt="profile picture" />
@@ -78,94 +44,6 @@ const StyledNavbar = styled.div`
     justify-content: space-around;
     border-bottom: 1px solid black;
     align-self: center;
-    
-    .cart {
-        /* :hover {
-            .cart_display {
-                display: block;
-            } */
-        }
-        .cart_display {
-            text-transform: none;
-            /* display: none; */
-            position: absolute;
-            width: 300px;
-            background-color: lightcyan;
-            border-radius: 15px;
-            top: 11%;
-            left: 72%;
-            -webkit-box-shadow: 0px 0px 16px -3px #000000; 
-            box-shadow: 0px 0px 16px -3px #000000;
-            .cart_title {
-                font-weight: bold;
-                text-align: left;
-                padding: 0.5rem;
-            }
-            .item_in_cart {
-                margin: 0;
-                padding: .75em;
-                align-items: flex-start;
-                justify-content: flex-start;
-                /* padding: 0.75rem; */
-                /* background-color: red; */
-                display: flex;
-                flex-direction: column;
-                color: gray;
-
-                .item_in_cart_title{
-                    margin: 0;
-                    margin-bottom: 5px;
-                    letter-spacing: 1px;
-            
-
-                }
-                .item_in_cart_prices {
-                    padding: 0;
-                    margin: 0;
-                    display: flex;
-                    flex-direction: row;
-                    p{
-                        margin: 0;
-                        margin-right: 10px;
-                    }
-                    .item_in_cart_final_price{
-                        color: black;
-                        font-weight: bold;
-                    }
-                }
-                .delete_item_icon {
-                    margin-left: 6rem;
-                    cursor: pointer;
-                    /* padding: .5rem; */
-                    /* width: 50%; */
-                    
-                    /* transition:all .25s ease-in-out;
-
-                    :hover {
-                        border-radius: 15px;
-                        background-color: orange;
-                    } */
-                }
-            }
-            .checkout_button {
-                align-items: center;
-                background-color: orange;
-                border: none;
-                margin-top: 5px;
-                border-radius: 10px;
-                color: white;
-                padding: 1rem;
-                font-size: .75em;
-                cursor: pointer;
-                letter-spacing: 3px;
-                text-align: center;
-                margin-bottom: 1rem;
-            }
-            }
-        }  
-    }
-
-
     .nav_item{
         cursor: pointer;
         margin: .25rem;
