@@ -2,6 +2,7 @@ import styled from "styled-components";
 import profile_pic from "../images/image-avatar.png";
 import React from "react";
 import CartDisplay from "./CartDisplay";
+import {Link} from 'react-router-dom';
 
 function Navbar({ item_in_cart, setItem_in_cart }) {
     const [displayCart, setDisplayCart] = React.useState(false);
@@ -11,11 +12,11 @@ function Navbar({ item_in_cart, setItem_in_cart }) {
       <p className="nav_item" id="Logo">
         SNEAKERS
       </p>
-      <p className="nav_item">Collections</p>
-      <p className="nav_item">Men</p>
-      <p className="nav_item">Women</p>
-      <p className="nav_item">About</p>
-      <p className="nav_item">Contact</p>
+      <Link to="/collections" className="nav_item">Collections</Link>
+      <Link to="/men" className="nav_item">Men</Link>
+      <Link to="/women" className="nav_item">Women</Link>
+      <Link to="/about" className="nav_item">About</Link>
+      <Link to="/contact" className="nav_item">Contact</Link>
       <div className="cart" onMouseEnter={() => setDisplayCart(!displayCart)} onMouseLeave={() => setDisplayCart(!displayCart)}>
         <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
           <path
