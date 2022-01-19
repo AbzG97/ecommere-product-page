@@ -1,10 +1,9 @@
 import React from 'react'
+import Item from './Item'
 
-function CollectionsPage() {
+function CollectionsPage({items}) {
     return (
         <div>
-            <h1>Collections Page</h1>
-            
         </div>
     )
 }
